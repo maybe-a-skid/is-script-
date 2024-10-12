@@ -1,0 +1,184 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Purpl3xity's IS Script",
+   LoadingTitle = "IS Script",
+   LoadingSubtitle = "by Purpl3xity",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, 
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "W5RAuHX95b", 
+      RememberJoins = true 
+   },
+   KeySystem = false, 
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", 
+      SaveKey = true, 
+      GrabKeyFromSite = false, 
+      Key = {"Hello"} 
+   }
+})
+
+local MainTab = Window:CreateTab("Main", 14500750409)
+local MSection = MainTab:CreateSection("Main Section")
+
+local TPTab = Window:CreateTab("Teleports", 14500750409)
+local TPSection = TPTab:CreateSection("tp iz sigma!")
+
+local MiscTab = Window:CreateTab("Info", 14500750409)
+local MiscSection = MiscTab:CreateSection("support to myself!!!")
+
+local HDButton = MainTab:CreateButton({
+   Name = "Delete Hazards",
+   Callback = function()
+   local function deleteModels(parent)
+    for _, child in ipairs(parent:GetChildren()) do
+        if child:IsA("Model") and 
+           (string.find(child.Name:lower(), "infector") or 
+            string.find(child.Name:lower(), "lava") or 
+            string.find(child.Name:lower(), "water") or 
+            string.find(child.Name:lower(), "weight")) then
+            child:Destroy()
+        else
+            deleteModels(child)
+        end
+    end
+end
+            deleteModels(workspace)
+            Rayfield:Notify({
+   Title = "IS Script",
+   Content = "ur hazards have disappeared!!!! u'll have to press it again every map change tho and also it removes disasters",
+   Duration = 6.5,
+   Image = 14500750409,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "ok cool",
+         Callback = function()
+         print("epic script that works (i got tired of the not working solara scripts)")
+      end
+   },
+},
+})
+   end,
+})
+
+local BBGetButton = MainTab:CreateButton({
+   Name = "Get Bottle and Bat",
+   Callback = function()
+local target1 = Vector3.new(-19, 6.5, -13)
+local target2 = Vector3.new(-19, 5, -17)
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local originalPosition = humanoidRootPart.Position
+
+humanoidRootPart.CFrame = CFrame.new(target1)
+wait(0.3)
+humanoidRootPart.CFrame = CFrame.new(target2)
+wait(0.1)
+humanoidRootPart.CFrame = CFrame.new(originalPosition)
+   end,
+})
+
+local Castle1 = TPTab:CreateButton({
+   Name = "Castle",
+   Callback = function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-334, 3, -2)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local HB1 = TPTab:CreateButton({
+   Name = "Human Base",
+   Callback = function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-7, 3, -3)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local s1 = TPTab:CreateButton({
+   Name = "Section 1",
+   Callback = function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-80, 5, -2)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local s2 = TPTab:CreateButton({
+   Name = "Section 2",
+   Callback = function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-142, 3, -11)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local s3 = TPTab:CreateButton({
+   Name = "Section 3",
+   Callback = function()
+   local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-208, 3, 0)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local s4 = TPTab:CreateButton({
+   Name = "Section 4",
+   Callback = function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+if char then
+    local humanoidrootpart = char:WaitForChild("HumanoidRootPart")
+    local target = Vector3.new(-251, 2, -8)
+
+    humanoidrootpart.CFrame = CFrame.new(target)
+end
+   end,
+})
+
+local TPWarn = TPTab:CreateLabel("Section TPs might kill you or smth cuz they spawn you in the middle of that section")
+
+local randominfo1 = MiscTab:CreateParagraph({Title = "some info on my bullshit scripting", Content = "im a poor solara user so im broke af and i couldnt work working is scripts so i js made my own. im gonna buy syn z so i can run rspy 🤑"})
+local invds1 = MiscTab:CreateLabel("pls join my discord server discord.gg/W5RAuHX95b 🥺")
