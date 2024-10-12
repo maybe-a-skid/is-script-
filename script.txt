@@ -184,8 +184,8 @@ local randominfo1 = MiscTab:CreateParagraph({Title = "some info on my bullshit s
 local invds1 = MiscTab:CreateLabel("pls join my discord server discord.gg/W5RAuHX95b 🥺")
 
 local execinfyield = MiscTab:CreateButton({
-	Name = "Execute Infinite Yield"
-	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end,
+   Name = "Execute IY",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
 })
