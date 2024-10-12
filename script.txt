@@ -182,3 +182,10 @@ local TPWarn = TPTab:CreateLabel("Section TPs might kill you or smth cuz they sp
 
 local randominfo1 = MiscTab:CreateParagraph({Title = "some info on my bullshit scripting", Content = "im a poor solara user so im broke af and i couldnt work working is scripts so i js made my own. im gonna buy syn z so i can run rspy 🤑"})
 local invds1 = MiscTab:CreateLabel("pls join my discord server discord.gg/W5RAuHX95b 🥺")
+
+local execinfyield = MiscTab:CreateButton({
+	Name = "Execute Infinite Yield"
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end,
+})
